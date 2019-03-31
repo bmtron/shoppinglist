@@ -20,7 +20,7 @@ function test() {
 }
 function checkList() {
     $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
-        //$('.shopping-item').toggleClass('shopping-item__checked');
+        
         $(event.currentTarget).closest('li').toggleClass('shopping-item__checked');
 
     });
