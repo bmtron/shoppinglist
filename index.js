@@ -18,13 +18,22 @@ function test() {
       $('#shopping-list-entry').val('');  
     });
 }
+function removeChecks(){
+    $('.shopping-item').removeClass('shopping-item_checked');
+}
 function checkList() {
     $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
         //$('.shopping-item').toggleClass('shopping-item__checked');
-        
-        $(event.currentTarget).closest("li").toggleClass('shopping-item__checked');
+        $(event.currentTarget).closest('li').toggleClass('shopping-item__checked');
 
+    });
+}
+function deleteItems() {
+    $('.shopping-list').on('click', '.shopping-item-delete', function(event) {
+        $(this).closest('li').remove();
     });
 }
 $(test);
 $(checkList);
+$(removeChecks);
+$(deleteItems);
