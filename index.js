@@ -18,9 +18,6 @@ function test() {
       $('#shopping-list-entry').val('');  
     });
 }
-function removeChecks(){
-    $('.shopping-item').removeClass('shopping-item_checked');
-}
 function checkList() {
     $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
         //$('.shopping-item').toggleClass('shopping-item__checked');
@@ -35,5 +32,4 @@ function deleteItems() {
 }
 $(test);
 $(checkList);
-$(removeChecks);
 $(deleteItems);
