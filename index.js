@@ -21,7 +21,7 @@ function test() {
 function checkList() {
     $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
         
-        $(event.currentTarget).closest('li').toggleClass('shopping-item__checked');
+        $(this).closest('li').toggleClass('shopping-item__checked');
 
     });
 }
